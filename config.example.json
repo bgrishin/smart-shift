@@ -1,0 +1,43 @@
+{
+  "_help": "Edit and save - SmartShift reloads this file automatically. 'at' is a clock time like '21:30' or a solar event (dawn, sunrise, noon, sunset, dusk) with an optional offset like 'sunset-1:30' or 'dusk+20m'. 'strength' is Night Shift warmth in percent: 0 = coolest, 100 = warmest. Between keyframes the warmth eases smoothly; after the last one it wraps to the first.",
+  "keyframes": [
+    {
+      "at": "10:00",
+      "strength": 50,
+      "label": "day"
+    },
+    {
+      "at": "sunset-1:30",
+      "strength": 50,
+      "label": "start warming"
+    },
+    {
+      "at": "dusk",
+      "strength": 75,
+      "label": "dark outside"
+    },
+    {
+      "at": "00:00",
+      "strength": 85,
+      "label": "night"
+    },
+    {
+      "at": "06:00",
+      "strength": 85,
+      "label": "start cooling"
+    }
+  ],
+  "easing": "smooth",
+  "location": {
+    "_help": "Leave null to guess from your time zone (no network, no permissions). Set for exact sunset times.",
+    "latitude": null,
+    "longitude": null
+  },
+  "fade_seconds": 10,
+  "update_interval_seconds": 30,
+  "pause_turns_off": true,
+  "menubar": {
+    "icon": "☾",
+    "show_percent": true
+  }
+}
